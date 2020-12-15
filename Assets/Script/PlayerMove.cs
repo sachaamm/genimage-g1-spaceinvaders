@@ -17,7 +17,17 @@ public class PlayerMove : MonoBehaviour
     {
         direction = new Vector3(1, 0,0);
        // transform.position = direction + transform.position;
-        transform.position = direction*speed + transform.position;
+       
+        
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.Translate(Vector3.left * speed);
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Translate(Vector3.right * speed);
+        }
+
 
     }
 }
