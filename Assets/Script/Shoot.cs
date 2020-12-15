@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
-   public GameObject laserPrefab;
+        public GameObject laserPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +14,12 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 laserOffset = new Vector3(0, 0.5f, 0);
+        
         if (Input.GetKey(KeyCode.Space)) 
         {
             GameObject laser2 = Instantiate(laserPrefab);
-            laser2.transform.position = gameObject.transform.position;
-     }
+            laser2.transform.position = gameObject.transform.position + laserOffset;
+        }
     }
 }
