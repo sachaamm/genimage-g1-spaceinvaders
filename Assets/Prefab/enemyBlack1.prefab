@@ -160,3 +160,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPrefab2: {fileID: 5820243734007503072, guid: 408b981b88fb34f44b01258485656e87,
     type: 3}
+  countMax: 3
