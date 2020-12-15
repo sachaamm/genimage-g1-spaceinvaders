@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DetectEnemyLaser : MonoBehaviour
+public class PlayerLife : MonoBehaviour
 {
-    PlayerLife playerLife;
+    int life = 3;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerLife = GetComponent<PlayerLife>();
+        
     }
 
     // Update is called once per frame
@@ -17,11 +17,13 @@ public class DetectEnemyLaser : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+   public void RecevoirDegat()
     {
-        if (collision.gameObject.tag == "EnemyLaser")
+        life--;
+        if (life <= 0)
         {
-            playerLife.RecevoirDegat();
+            Destroy(gameObject);
         }
     }
 }
