@@ -21,9 +21,10 @@ public class EnemyShoot : MonoBehaviour
        
         if (count > countMax)
         {
-            GameObject laser2 = Instantiate(laserPrefab2);
+            GameObject laser2 = Instantiate(laserPrefab2, ParentReference.Singleton.projectilesParent.transform);
             laser2.transform.position = gameObject.transform.position + laserOffset;
             count = 0;
+            Destroy(laser2, 2);
            
         }
         

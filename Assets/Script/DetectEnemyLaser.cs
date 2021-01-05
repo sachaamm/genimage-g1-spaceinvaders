@@ -19,7 +19,8 @@ public class DetectEnemyLaser : MonoBehaviour
     {
         if (collision.gameObject.tag == "EnemyLaser")
         {
-           // Destroy(gameObject);
+           PlayerLife.Singleton.RecevoirDegat();
+           Destroy(collision.gameObject);
         }
     }
 }

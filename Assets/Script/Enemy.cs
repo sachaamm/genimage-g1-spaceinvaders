@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     public float speed = 1;
     bool reachLimit = false;
     float count;
-    public float countMax = 0.5f;
+    public float tempsDescente = 0.4f;
     Vector3 direction;
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
         {
             count += Time.deltaTime;
             transform.Translate(Vector3.down * speed);
-            if(count > countMax)
+            if(count > tempsDescente)
             {
                 reachLimit = false;
                 count = 0;

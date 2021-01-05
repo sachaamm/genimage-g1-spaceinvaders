@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
-        public GameObject laserPrefab;
+    public GameObject laserPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +18,9 @@ public class Shoot : MonoBehaviour
         
         if (Input.GetKey(KeyCode.Space)) 
         {
-            GameObject laser2 = Instantiate(laserPrefab);
+            GameObject laser2 = Instantiate(laserPrefab, ParentReference.Singleton.projectilesParent.transform);
             laser2.transform.position = gameObject.transform.position + laserOffset;
+            Destroy(laser2, 2);
         }
     }
 }
