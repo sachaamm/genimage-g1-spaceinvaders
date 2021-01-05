@@ -538,9 +538,10 @@ GameObject:
   - component: {fileID: 1332615048}
   - component: {fileID: 1332615049}
   - component: {fileID: 1332615050}
+  - component: {fileID: 1332615051}
   m_Layer: 0
   m_Name: playerShip1_red
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -557,7 +558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbcb0b639d637884a8fc14d7cd537fe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.01
+  speed: 0.1
 --- !u!212 &1332615045
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -687,6 +688,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextLevel: toto
+--- !u!114 &1332615051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332615043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de3bd8251967b1c4c8e88e020c01465d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1353248842
 PrefabInstance:
   m_ObjectHideFlags: 0
