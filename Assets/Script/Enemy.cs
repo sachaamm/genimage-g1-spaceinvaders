@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float speed = 1;
+    public GameObject player;
     bool reachLimit = false;
     float count;
     public float countMax = 50;
@@ -36,12 +37,16 @@ public class Enemy : MonoBehaviour
         }
         
     }
-
+    
+       
     void OnTriggerEnter2D(Collider2D collision)
-    {
+    {      
         if (collision.gameObject.tag == "Shoot")
         {
+            var script = player.GetComponent<EndofLevel>();
+           
             Destroy(gameObject);
+            script.EnnemyNumber--;
         }
     }
     bool NextPosIsInLimit(Vector3 direction)
