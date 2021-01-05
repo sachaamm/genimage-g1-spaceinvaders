@@ -537,6 +537,7 @@ GameObject:
   - component: {fileID: 1332615047}
   - component: {fileID: 1332615048}
   - component: {fileID: 1332615049}
+  - component: {fileID: 1332615050}
   m_Layer: 0
   m_Name: playerShip1_red
   m_TagString: Untagged
@@ -671,6 +672,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28045a97a3df0834ca793937b12cbc3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1332615050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332615043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d0c317bb30bfc749b2780a1bbf707de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1353248842
