@@ -17,7 +17,8 @@ public class Enemy : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {       
+    {
+        tempsDescente = 0.005f / speed * 0.4f;
         if (NextPosIsInLimit(direction * speed))
         {
             transform.Translate(direction * speed);

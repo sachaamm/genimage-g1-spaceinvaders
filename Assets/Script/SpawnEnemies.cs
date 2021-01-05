@@ -32,8 +32,11 @@ public class SpawnEnemies : MonoBehaviour
             GameObject NewEnemy = Instantiate(EnemyPrefab);
 
             NewEnemy.transform.position = new Vector3(i, 0, 0) + SpawnPoint.transform.position;
-            
-           
+           // float ennemySpeed = gameObject.GetComponent<Enemy>();
+            Enemy componentEnemy = NewEnemy.GetComponent<Enemy>();
+            float enemySpeed = componentEnemy.speed;
+            componentEnemy.speed = Level /(float)100;
+            //HingeJoint hinge = gameObject.GetComponent<HingeJoint>();
         }
     }
 }
